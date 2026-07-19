@@ -137,16 +137,11 @@ streamlit run app.py
 
 ---
 
-## 📷 Screenshots
+## Live Demo
 
-Add screenshots of:
-
-- Data Cleaning
-- Correlation Heatmap
-- RFM Analysis
-- Customer Segmentation
-- Prophet Forecast
-- Streamlit Dashboard
+**Streamlit App:** (https://ai-powered-demand-inventory-intelligence-djbeffxfsvpyeiorjemm8.streamlit.app/)
+## GitHub Repository
+https://github.com/yogesh12-hub/AI-Powered-Demand-Inventory-Intelligence
 
 ---
 
@@ -171,6 +166,7 @@ B.Tech Computer Science Engineering
 Data Science | Machine Learning | Python | Streamlit | AI
 
 GitHub: https://github.com/yogesh12-hub
+
 
 ---
 
