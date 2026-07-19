@@ -1,4 +1,4 @@
-# 📊 RetailPulse – AI-Powered Customer Analytics & Demand Forecasting Platform
+# 📊 RetailPulse – AI-Powered Demand & Inventory Intelligence Platform
 
 ## 📌 Project Overview
 
