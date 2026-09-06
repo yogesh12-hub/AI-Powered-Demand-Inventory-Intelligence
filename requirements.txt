@@ -1,3 +1,5 @@
+
+Requirements · TXT
 pandas
 numpy
 scikit-learn
@@ -9,3 +11,22 @@ matplotlib
 seaborn
 streamlit
 openpyxl
+fpdf2
+duckdb
+openai
+google-generativeai
+xlsxwriter
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
