@@ -1,4 +1,6 @@
 """FORESIGHT entry point: page config, global styling, navigation and session state."""
+from pathlib import Path
+
 import streamlit as st
 
 st.set_page_config(page_title="FORESIGHT", page_icon="🔭", layout="wide", initial_sidebar_state="expanded")
@@ -8,10 +10,10 @@ from src.visualization.dashboard_components import get_settings, get_ws, inject_
 get_ws()
 get_settings()
 inject_css()
-st.logo("assets/logo.svg")
+st.logo(str(Path(__file__).resolve().parent / "assets" / "logo.svg"))
 
 PAGES = [
-    st.Page("pages/1_Overview.py", title="Overview", icon=":material/dashboard:", default=True),
+    st.Page("pages/1_Overview.py", title="Home", icon=":material/home:", default=True),
     st.Page("pages/2_Demand_Forecasting.py", title="Demand Forecasting", icon=":material/show_chart:"),
     st.Page("pages/3_Inventory_Intelligence.py", title="Inventory Intelligence", icon=":material/inventory_2:"),
     st.Page("pages/4_Replenishment.py", title="Replenishment", icon=":material/local_shipping:"),
@@ -22,6 +24,7 @@ PAGES = [
     st.Page("pages/9_Settings.py", title="Settings", icon=":material/settings:"),
 ]
 nav = st.navigation(PAGES)
+st.session_state["_nav_ready"] = True   # pages check this to make sure they were started via app.py
 sidebar_status()
 try:
     nav.run()

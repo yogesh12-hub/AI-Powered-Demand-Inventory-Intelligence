@@ -227,7 +227,19 @@ def render_filters(ws: Workspace) -> Filters:
     return Filters(d0, d1, list(st.session_state["f_cat"]), list(st.session_state["f_sub"]), list(st.session_state["f_sku"]))
 
 
+def ensure_app_context():
+    """Every page must run through app.py (which sets styling, logo and navigation). If a page script was opened directly
+    (e.g. a stale session or legacy multipage routing), send the user to app.py instead of showing an unstyled page."""
+    if st.session_state.get("_nav_ready"):
+        return
+    try:
+        st.switch_page("app.py")
+    except Exception:  # noqa: BLE001 - last resort: at least keep the styling
+        inject_css()
+
+
 def setup_page(title: str, subtitle: str = "", filters: bool = True) -> Filters | None:
+    ensure_app_context()
     st.session_state["_page"] = title
     header(title, subtitle)
     ws, settings = get_ws(), get_settings()

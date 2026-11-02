@@ -8,7 +8,7 @@ from src.visualization import charts
 from src.visualization import dashboard_components as ui
 
 ws, settings = ui.get_ws(), ui.get_settings()
-f = ui.setup_page("Overview", "Calculated KPIs from your uploaded data")
+f = ui.setup_page("Home", "Overview of your uploaded data: calculated KPIs, trends, risks and insights")
 ui.require_sales(ws, settings)
 d = filtered(ws, f, settings)
 s = d["sales"]
