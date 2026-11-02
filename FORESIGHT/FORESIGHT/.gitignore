@@ -3,12 +3,12 @@
 *.key
 secrets.toml
 # uploaded / confidential datasets and generated artefacts
-uploads/
-data/
+/uploads/
+/data/
 *.csv
 !templates/*.csv
-exports/
-outputs/
+/exports/
+/outputs/
 *.xlsx
 *.parquet
 # python / tooling
